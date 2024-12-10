@@ -6,7 +6,7 @@ CONTAINER_NAME="mrfit-nginx"
 
 # Construir la imagen Docker
 echo "Construyendo la imagen Docker..."
-docker build -t $IMAGE_NAME .
+sudo docker build -t $IMAGE_NAME .
 
 # Detener el contenedor existente (si existe)
 if [ $(docker ps -q -f name=$CONTAINER_NAME) ]; then
